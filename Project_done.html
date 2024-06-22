@@ -20,18 +20,45 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" class="dark-theme">
 
     <!-- page navbar -->
-    <nav class="page-navbar" data-spy="affix" data-offset-top="10">
-        <ul class="nav-navbar container">
-            <li class="nav-item"><a href="#" class="nav-link"><img src="assets/imgs/colour-logo-1.png"
-                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, weber Landing page"></a>
-            </li>
-            <li class="nav-item"><a href="assets/files/4.pdf" class="nav-link" download>Portfolio</a></li>
-            <li class="nav-item"><a href="Project_underway.html" class="nav-link">Underway</a></li>
-            <li class="nav-item"><a href="Project_done.html" class="nav-link">Projects done</a></li>
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+<!-- Page Navbar -->
+<nav class="page-navbar" data-spy="affix" data-offset-top="10">
+    <ul class="nav-navbar container d-none d-md-flex">
+        <li class="nav-item"><a href="#" class="nav-link"><img src="assets/imgs/colour-logo-1.png"
+                    alt="Logo"></a></li>
+        <li class="nav-item"><a href="assets/files/4.pdf" class="nav-link" download>Portfolio</a></li>
+        <li class="nav-item"><a href="Project_underway.html" class="nav-link">Underway</a></li>
+        <li class="nav-item"><a href="Project_done.html" class="nav-link">Projects done</a></li>
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+    </ul>
+    <div class="d-md-none d-flex justify-content-between align-items-center container">
+        <a href="#" class="navbar-brand"><img src="assets/imgs/colour-logo-1.png" alt="Logo" style="height: 40px;"></a>
+        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#sidebarModal" style="background: black;">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav><!-- end of page navbar -->
 
-        </ul>
-    </nav><!-- end of page navbar -->
+<!-- Sidebar Modal -->
+<div class="modal fade" id="sidebarModal" tabindex="-1" role="dialog" aria-labelledby="sidebarModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-slideout modal-dialog-centered" role="document">
+        <div class="modal-content" style="background-color: #212529;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sidebarModalLabel">Menu</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="Project_underway.html" class="nav-link">Underway</a></li>
+                    <li class="nav-item"><a href="Project_done.html" class="nav-link">Projects done</a></li>
+                    <li class="nav-item"><a href="assets/files/4.pdf" class="nav-link" download>Portfolio</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
     <div class="theme-selector">
         <a href="javascript:void(0)" class="spinner">
