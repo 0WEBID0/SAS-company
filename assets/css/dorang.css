@@ -563,7 +563,7 @@ pre code {
 
 @media (min-width: 576px) {
   .container {
-    max-width: 540px;
+    max-width: 400px;
   }
 }
 
@@ -6834,6 +6834,7 @@ a.close.disabled {
   position: relative;
   width: 100%;
   overflow: hidden;
+  text-align: center;
 }
 
 .carousel-inner::after {
@@ -9250,6 +9251,7 @@ button.bg-dark:focus {
 
 .m-auto {
   margin: auto !important;
+  text-align: center;
 }
 
 .mt-auto,
@@ -11006,7 +11008,7 @@ a:hover {
 }
 
 .card .card-img {
-  width: 100%;
+  width: 70%;
   border-radius: 0.25rem;
 }
 
@@ -11865,116 +11867,6 @@ body.dark-theme {
   filter: none;
 }
 
-/* Styles for overlay images */
-.overlay-img {
-    position: relative;
-    display: block;
-}
-
-.overlay-img img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.overlay-img .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.overlay-img:hover .overlay {
-    opacity: 1;
-}
-
-.overlay-img .des {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-    text-align: left;
-}
-
-.overlay-img .title {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-.overlay-img .subtitle {
-    font-size: 1rem;
-    margin: 0;
-}
-
-/* Styles for modal */
-.modal-lg {
-    max-width: 80%;
-}
-
-.modal-body .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.modal-body .col-md-4 {
-    margin-bottom: 20px;
-}
-
-/* Styles for card images */
-.card {
-  position: relative;
-  display: block;
-  border: none;
-  margin-bottom: 20px;
-}
-
-.card-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.card-body {
-  padding: 1rem;
-  text-align: left;
-}
-
-.card-subtitle {
-  font-size: 0.9rem;
-  color: #6c757d;
-}
-
-.card-title {
-  font-size: 1.5rem;
-  margin-top: 0.5rem;
-}
-
-.card p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #6c757d;
-}
-
-/* Styles for modal */
-.modal-lg {
-  max-width: 80%;
-}
-
-.modal-body .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.modal-body .col-md-6 {
-  margin-bottom: 20px;
-}
-
 .white{
-  color: white !important;
+  color: white;
 }
