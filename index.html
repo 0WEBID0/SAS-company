@@ -79,7 +79,7 @@
         <p class="header-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt.</p>
 
-        <button class="btn btn-theme-color modal-toggle"><i class="ti-control-play text-danger"></i> Watch
+        <button class="btn btn-theme-color modal-toggle" id="openModalBtn"><i class="ti-control-play text-danger"></i> Watch
             Video</button>
     </div>
     <video autoplay muted loop playsinline class="background-video">
@@ -90,14 +90,15 @@
 
 
 
-    <!-- modal -->
-    <div class="modalBox">
-        <div class="modalBox-body">
-            <iframe width="100%" height="450px" class="border-0"
-                src="https://www.youtube.com/embed/tgbNyZ7vqY?controls=0">
-            </iframe>
-        </div>
-    </div><!-- end of modal -->
+<!-- modal -->
+<div class="modalBox" id="videoModal">
+    <div class="modalBox-body">
+        <video id="modalVideo" width="100%" height="450px" class="border-0" controls>
+            <source src="assets/imgs/EshraqaResidences.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div><!-- end of modal -->
 
     <!-- page container -->
     <div class="container page-container">
@@ -354,6 +355,34 @@
         <!-- Dorang js -->
         <script src="assets/js/dorang.js"></script>
             
+
+        <script>
+            // الحصول على العناصر
+            var modal = document.getElementById('videoModal');
+            var video = document.getElementById('modalVideo');
+            var openModalBtn = document.getElementById('openModalBtn');
+        
+            // وظيفة لإيقاف الفيديو
+            function stopVideo() {
+                video.pause();
+                video.currentTime = 0;
+            }
+        
+            // فتح الـ modal عند النقر على الزر
+            openModalBtn.onclick = function() {
+                modal.style.display = "block";
+            }
+        
+            // مراقبة النقر خارج الـ modal لإغلاقه وإيقاف الفيديو
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    stopVideo();
+                }
+            }
+        </script>
+        
+        
 
 </body>
 
